@@ -1,6 +1,6 @@
 {
-  "name": "accesory",
-  "version": "0.0.0",
+  "name": "whatsapp-button",
+  "version": "0.0.1",
   "scripts": {
     "test": "vtex-test-tools test"
   },
@@ -21,6 +21,7 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
     "graphql": "^14.6.0",
+    "prop-types": "^15.8.1",
     "typescript": "3.9.7",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles"
   },
