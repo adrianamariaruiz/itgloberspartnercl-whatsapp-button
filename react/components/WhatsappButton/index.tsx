@@ -10,16 +10,15 @@ type Props = {
 }
 
 const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
-
-  const formatMessage = message.replace(/ /g, "%20")
-  console.log("mensaje formateado", formatMessage)
+  const formatMessage = message.replace(/ /g, '%20')
+  console.log('mensaje formateado', formatMessage)
 
   return (
     <>
-      <div className='fixed bottom-2 right-2 flex flexColumn'>
+      <div className="fixed bottom-2 right-2 flex flexColumn">
         <a
           href={`https://wa.me/${phone}?text=${formatMessage}`}
-          target='_blank'
+          target="_blank"
           rel="noreferrer noopener"
         >
           <img
@@ -39,52 +38,52 @@ WhatsappButton.PoropTypes = {
   phone: PoropTypes.string.isRequired,
   message: PoropTypes.string,
   height: PoropTypes.number,
-  width: PoropTypes.number
+  width: PoropTypes.number,
 }
 
 WhatsappButton.defaultProps = {
-  logo: "my-icon.png",
-  phone: "3003111000",
-  message: "Te estás comunicando con lilipink",
+  logo: 'my-icon.png',
+  phone: '3003111000',
+  message: 'Te estás comunicando con lilipink',
   height: 50,
-  width: 50
+  width: 50,
 }
 
 WhatsappButton.schema = {
-  title: "Whatsapp button",
-  type: "object",
+  title: 'Whatsapp button',
+  type: 'object',
   properties: {
     logo: {
-      title: "whatsapp icon",
-      type: "string",
+      title: 'whatsapp icon',
+      type: 'string',
       widget: {
-        "ui:widget": "image-uploader"
-      }
+        'ui:widget': 'image-uploader',
+      },
     },
     phone: {
-      title: "Phone",
-      description: "Add a number",
-      type: "string",
+      title: 'Phone',
+      description: 'Add a number',
+      type: 'string',
     },
     message: {
-      title: "Message",
-      description: "Add the message the customer will see",
-      type: "string",
+      title: 'Message',
+      description: 'Add the message the customer will see',
+      type: 'string',
       widget: {
-        "ui:widget": "textarea"
-      }
+        'ui:widget': 'textarea',
+      },
     },
     width: {
-      title: "width",
-      description: "width logo",
-      type: "number"
+      title: 'width',
+      description: 'width logo',
+      type: 'number',
     },
     height: {
-      title: "height",
-      description: "height logo",
-      type: "number"
+      title: 'height',
+      description: 'height logo',
+      type: 'number',
     },
-  }
+  },
 }
 
 export default WhatsappButton
